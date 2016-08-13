@@ -22,12 +22,23 @@
 	<div class="flexHeader">
 		<span>iTunes Top 100 Albums - Powered by Exzeo</span>
 		<br>
+	<script id="carouselTemplate" type="text/x-handlebars-template">
 		<div class="flexCarousel">
 			<div class="autoplay">
-				<div>Thing 1</div>
-				<div>Thing 2</div>
+				<span class="Ranking">{{ranking}}</span>
+				<br>
+				<a href="{{iTunesLink}}" target="_blank">
+					<img src="{{albumArt}}" title="{{genre}}, {{songCount}} Tracks on album, {{rights}}" class="img">
+				</a>
+				<br>
+				<span class="Name">{{name}}</span>
+				<br>
+				<span class="Artist">{{artist}}</span>
+				<br>
+				<span class="ReleaseDate">{{releaseDate}}</span>
 			</div>
 		</div>
+	</script>	
 	</div>
 	<div>
 		<script id="template" type="text/x-handlebars-template">
