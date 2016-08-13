@@ -1,33 +1,111 @@
 /* Let's make carousel stuff!*/
 
-
-.carousel-indicators li { 
-	visibility: hidden; 
+/*Properties for entire page body, unless set otherwise below*/
+.flexBody {           
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color:White;
 }
 
-
-.AlbumArt {
+/*Properties for everything in top header*/
+.flexHeader {
+	-webkit-justify-content: center;
+    justify-content: center;
+    align-items: wrap;
+	background-color: White;
+	/*border-bottom: solid;*/
+	border-color: black;
+	border-width: 1px;
+	width: 100%;
+    height: auto;
+	text-align: center;
 
 }
 
-.Name {								/*Formatting for the Album Name entry*/
-    font-weight:bold;
-    font-size:medium;
+/*Top Header Title*/
+.flexHeaderTitle {
+	font-size: 600%;
+	font-weight: bold;
+font-family: Helvetica;
+text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }
 
-.Artist {							/*Formatting for the Artist entry*/
-	font-style:italic;
-	font-size:small;  
+/*Powered by Exzeo text*/
+.flexHeaderSubtext {
+	font-size: 120%;
+	font-weight: bold;
+	color: Black;
+	position: relative;
+	vertical-align: super;
+}
+
+/*Exzeo Logo in header*/
+.flexHeaderLogo {
+	height: 40px;
+	vertical-align: text-bottom;
+}
+
+/*Links in header*/
+.flexHeaderLinks {
+	
+}
+
+/*Place flexbox properties for flexBoxContainerEntry and child elements here*/
+.flexItemAlbumEntry {
+	display: flex;
+	flex-direction: column;  
+	position: releative;	
+   	background-color: LightGray;
+   	/*		
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+	*/
+    width: 300px;
+    height: 320px;
+    margin: 10px;
+    box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+	border-radius:45px;
 }
 
 .Rank {
+	margin-bottom: auto;
 	color:Red;
 	font-size:small;
 }
 
+.AlbumArt {
+	position: absolute;
+	width: 300px;
+	height:300px;
+	border-width:1px;
+   	border-color:black;
+   	border-radius:10px;
+}
+
+.Name {								/*Formatting for the Album Name entry*/
+    font-weight:bold;
+    font-size:100%;
+}
+
+.Artist {							/*Formatting for the Artist entry*/
+	font-style:italic;
+	font-size:14px;  
+}
+
+
+
 .ReleaseDate {						/*Formatting for the Release Date entry*/
-	color:DarkGrey;
-	font-size:smaller;					
+	margin-top: auto;
+	color:Black;
+	font-size:12px;
 }
 
 .flexCarousel {           /*Flex Container for top carousel*/
@@ -58,19 +136,6 @@
     margin: 5px;
 }
 
-.flexContainerVert {           /*Flex Container for bottom*/
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    background-color:Beige;
-}
 
 /*NOT IN USE
 .flexItemRank {
@@ -97,36 +162,6 @@ NOT IN USE*/
     background-color:GhostWhite; 			/*This is TEMPORARY*/	
 }
 
-.flexHeader {
-	background-color:DarkGrey;
-	border-style:solid;
-	border-color:black;
-	border-width:1px;
-	-webkit-justify-content: center;
-    justify-content: center;
-    align-items:wrap;
-    width: 100%;
-    height: auto;
-    font-size:x-large;
-    text-align:center;
-}
-
-.flexItemAlbumEntry {  				/*Flex elements within bottom album titles flex container*/
-   /*
-    background-color:LightGrey;		
-    border-style:solid;
-    border-color:black;
-    border-width:1px;
-    border-radius:25px;
-   */
-    -webkit-justify-content: center;
-    justify-content: center;
-    align-items:wrap;
-    width: 300px;
-    height: 300px;
-    margin: 5px;
-}
-
 .img{
     width: 170px;
     cursor: pointer;
@@ -134,6 +169,7 @@ NOT IN USE*/
    	border-width:1px;
    	border-color:black;
    	border-radius:10px;
+   	box-shadow:0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }
 
 .img:hover{
@@ -142,7 +178,7 @@ NOT IN USE*/
     border-radius: 10px;
  -webkit-box-shadow: 0px 0px 30px 0px rgba(30, 30, 30, 1);
 -moz-box-shadow:    0px 0px 30px 0px rgba(30, 30, 30, 1);
-box-shadow:         0px 0px 30px 0px rgba(30, 30, 30, 1);
+box-shadow:0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(255,255,255,.1), 0 0 5px rgba(255,255,255,.1), 0 1px 3px rgba(255,255,255,.3), 0 3px 5px rgba(100,100,100,.2), 0 5px 10px rgba(255,255,255,.25), 0 10px 10px rgba(255,255,255,.2), 0 20px 20px rgba(255,255,255,.15);
 }
 /*
 .img:last-of-type:hover{
