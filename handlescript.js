@@ -1,13 +1,13 @@
 /*globals $, Handlebars*/
 
 //This will grab the Carousel Template
-//var srcCarousel = $('#carouselTemplate').html();
+
+var srcCarousel = $('#carouselTemplate').html();
 
 var srcAlbums = $('#template').html();
 
 //This will compile the Carousel Template information
-//var carouselTemplate = Handlebars.compile(srcCarousel);
-
+var carouselTemplate = Handlebars.compile(srcCarousel);
 var musicTemplate = Handlebars.compile(srcAlbums);
 var ranking = 1;
 
@@ -42,12 +42,13 @@ $.getJSON("https://itunes.apple.com/us/rss/topalbums/limit=100/json", function(d
         }
         
         //Need to figure out how to put both musicTemplate and carouselTemplate inside this
-        var htmlToPutIntoBody = musicTemplate(formattedAlbum);
+        var htmlCarouseler = carouselTemplate(formattedAlbum);
+        var htmlTemplater = musicTemplate(formattedAlbum);
 
         ranking = ranking+1;
         
-
-        $('body').append(htmlToPutIntoBody);
+		//$('body').append(htmlCarouseler);
+        $('body').append(htmlTemplater);
 
     });
 
