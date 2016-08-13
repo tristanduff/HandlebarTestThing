@@ -11,10 +11,20 @@ var srcAlbums = $('#template').html();
 var musicTemplate = Handlebars.compile(srcAlbums);
 var ranking = 1;
 
+
+    
+ 
     
 $.getJSON("https://itunes.apple.com/us/rss/topalbums/limit=100/json", function(data) {
     var albums = data.feed.entry;
     
+ $('.autoplay').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});      
+
     $.each(albums, function (index, album) {
  
         var formattedAlbum = {
