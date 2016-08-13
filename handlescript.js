@@ -38,9 +38,18 @@ $.getJSON("https://itunes.apple.com/us/rss/topalbums/limit=100/json", function(d
             //details to pull and display for each album in carousel
             songCount:album['im:itemCount'].label,
             genre:album['category'].attributes.label,
+            moreOfGenre:album['category'].attributes.scheme,
+            
+			//Turning off More of Artist, enable error handling for albums with no artist URL
+			//if album.artist.attributes.href=undefined,
+				//don't make moreOfArtist at all
+			//else
+				//moreOfArtist:album['im:artist'].attributes.href,
+			
             rights:album['rights'].label
         }
-        
+            //console.log(album['im:artist'].attributes.href);      
+              
         //Need to figure out how to put both musicTemplate and carouselTemplate inside this
         var htmlCarouseler = carouselTemplate(formattedAlbum);
         var htmlTemplater = musicTemplate(formattedAlbum);
