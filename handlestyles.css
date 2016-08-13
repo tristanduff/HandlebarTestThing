@@ -1,0 +1,155 @@
+/* Let's make carousel stuff!*/
+
+
+.carousel-indicators li { 
+	visibility: hidden; 
+}
+
+
+.AlbumArt {
+
+}
+
+.Name {								/*Formatting for the Album Name entry*/
+    font-weight:bold;
+    font-size:medium;
+}
+
+.Artist {							/*Formatting for the Artist entry*/
+	font-style:italic;
+	font-size:small;  
+}
+
+.Rank {
+	color:Red;
+	font-size:small;
+}
+
+.ReleaseDate {						/*Formatting for the Release Date entry*/
+	color:DarkGrey;
+	font-size:smaller;					
+}
+
+.flexCarousel {           /*Flex Container for top carousel*/
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    background-color:AliceBlue;
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+}
+
+.flexHorizEntry {  				/*Flex elements within bottom album titles flex container*/
+ 	background-color:LightGrey;		
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+    margin: 5px;
+}
+
+.flexContainerVert {           /*Flex Container for bottom*/
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color:Beige;
+}
+
+/*NOT IN USE
+.flexItemRank {
+    background-color:LightGrey;	
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 5%;
+    height: auto;
+    margin: 5px;	
+}
+NOT IN USE*/
+
+.flexItemCarousel {  				/*Top flex element for carousel*/
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 5px;
+    background-color:GhostWhite; 			/*This is TEMPORARY*/	
+}
+
+.flexHeader {
+	background-color:DarkGrey;
+	border-style:solid;
+	border-color:black;
+	border-width:1px;
+	   -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    font-size:x-large;
+    text-align:center;
+}
+
+.flexItemAlbumEntry {  				/*Flex elements within bottom album titles flex container*/
+   /*
+    background-color:LightGrey;		
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+    border-radius:25px;
+   */
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items:wrap;
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+}
+
+.img{
+    width: 170px;
+    cursor: pointer;
+    /*padding: 10px;*/
+   	border-width:1px;
+   	border-color:black;
+   	border-radius:10px;
+}
+
+.img:hover{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(30, 30, 30, 1);
+-moz-box-shadow:    0px 0px 30px 0px rgba(30, 30, 30, 1);
+box-shadow:         0px 0px 30px 0px rgba(30, 30, 30, 1);
+}
+/*
+.img:last-of-type:hover{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(255, 255, 255, 0.67);
+}
+*/
