@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<title>Songs</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="handlestyles.css">																				<!--Lecal CSS Stylesheet-->
+  	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>														<!--Access to JQuery Library-->
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>												<!--Access to JQuery UI Library-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>		
+
+</head>
+<body class="flexBody">
+<!--Denotes everything within as handlebars-->
+	<div class="flexHeader">
+		<span class="flexHeaderTitle">iTunes Top 100 Songs</span>
+		<br>
+		<span class="flexHeaderSubtext">Powered by </span><img src="exzeo.jpg" class="flexHeaderLogo">
+		<br>
+		<span><a href="handlebar.html">Check out the top 100 albums on iTunes here!</a></span>
+	<script id="carouselTemplate" type="text/x-handlebars-template">
+		
+		<div class="flexCarousel">
+			<div class="autoplay">
+				<span class="Ranking">{{ranking}}</span>
+				<a href="{{iTunesLink}}" target="_blank">
+					<img src="{{albumArt}}" title="Get more {{genre}} at {{moreOfGenre}}, {{songCount}} Tracks on album, {{rights}}, " class="img">
+				</a>
+				<br>
+				<span class="Name">{{name}}</span>
+				<br>
+				<span class="Artist">{{artist}}</span>
+				<br>
+				<span class="ReleaseDate">#{{ranking}}{{releaseDate}}</span>
+			</div>
+		</div>
+	</script>	
+	</div>
+	<div>
+		<script id="template" type="text/x-handlebars-template">
+			<div align="center" class="flexItemAlbumEntry container">
+				<span class="Ranking">#{{ranking}}</span>
+				<!--When finished, the iTunesLink will be replaced and will set focus of the top carousel-->
+				<a href="{{iTunesLink}}" target="_blank">
+					<img src="{{albumArt}}" title="Explore {{artist}} and get more {{genre}} at {{moreOfGenre}}! {{songCount}} Tracks on album, {{rights}}" class="img box">
+				</a>
+				<br>
+				<span class="Name box">{{name}}</span>
+
+				<span class="Artist box">{{artist}}</span>
+
+				<!--<span class="ReleaseDate box">#{{ranking}}, released {{releaseDate}}</span>-->
+			</div>
+		</script>
+	</div>
+	
+	<script src="songscript.js"></script> 																						<!--Loads the external javascript source after processing above HTML-->
+	<script src="jquery.ui.touch-punch.min.js"></script>	
+																<!--Loads the Touch Punch hack JavaScript to allow touchscreen function-->
+	<!--The code above is dual licensed under the MIT or GPL Version 2 licenses and is therefore free to use, modify and/or distribute.-->
+	<!--Touch Punch source: http://http://touchpunch.furf.com/-->
+</body>
+</html>
